@@ -48,6 +48,22 @@ metadata:
 
 从多个源头抓取当日热点：
 
+**真实抓取模式**（需要网络/代理）：
+```bash
+# 使用 Bun 运行抓取脚本
+cd ~/.claude/skills/auto-writer
+bun scripts/fetch-hot.ts /tmp/auto-writer-hot
+```
+
+**OpenClaw 环境**（推荐）：
+```bash
+# 在 OpenClaw 中可直接调用 baoyu-url-to-markdown
+/baoyu-url-to-markdown https://s.weibo.com/top/summary
+/baoyu-url-to-markdown https://www.zhihu.com/hot
+```
+
+**数据源列表**：
+
 | 源头 | 类型 | API/方式 | 备注 |
 |------|------|----------|------|
 | 微博热搜 | 社交 | `https://weibo.com/ajax/side/hotSearch` | 需登录Cookie |
